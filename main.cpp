@@ -56,7 +56,6 @@ int main() {
   cout << nestedParens("(()") << endl;         // false (0)
   cout << nestedParens(")(") << endl;          // false (0)
   cout << nestedParens("a(b)c") << endl;       // false (0)
-  
-  cout << "--------------------" << endl << endl;
+
   cout << "--------------------" << endl << endl;
 }

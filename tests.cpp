@@ -44,5 +44,9 @@ TEST_CASE("Task D") {
 
 // Task E (Bonus). Nested parentheses
 TEST_CASE("Task E") {
-  CHECK()
+  CHECK(nestedParens("") == true);
+  CHECK(nestedParens("()") == true);
+  CHECK(nestedParens("(())") == true);
+  CHECK(nestedParens("((()))") == true);
+  CHECK(nestedParens(")(") == false);
 }

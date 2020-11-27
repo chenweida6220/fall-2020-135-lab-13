@@ -51,28 +51,8 @@ bool isAlphanumeric(string s) {
 
 // Task E (Bonus). Nested parentheses
 bool nestedParens(string s) {
-  int tracker = 0;
   if (s == "" && s.length() == 0) {
     return true;
   }
-  else if (s[0] != '(' && s[0] != ')') {
-    return false;
-  }
-  else {
-    if (s[0] == '(') {
-      tracker++;
-    }
-    else if (s[0] == ')') {
-      tracker--;
-    }
-    cout << tracker+2;
-  }
-  nestedParens(s.substr(1));
-
-  if (tracker == 0) {
-    return true;
-  }
-  else {
-    return false;
-  }
+  return s[0]=='(' && s[s.length()-1] == ')' && nestedParens(s.substr(1,s.length()-2));
 }
